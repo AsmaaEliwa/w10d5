@@ -13,10 +13,17 @@ function App() {
       <GalleryNavigation data = {harvardArtData}/>
       </div>
       <Switch>
+        <Route path='/'exact> <><h2>Harvard Art Museum</h2>
+        <p>
+        Look, but Don't Touch. Please select a Gallery in the navigation bar.
+        </p>
+        </></Route>
         <Route path="/galleries/:galleryId" >
           <Gallery data={harvardArtData} />
         </Route>
         <Route path="/galleries" component={GalleryNavigation} ></Route>
+        <Route  > <h2> Page Not Found</h2></Route>
+
       </Switch>
     </>
     
